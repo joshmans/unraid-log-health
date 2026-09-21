@@ -1,0 +1,80 @@
+Sep 20 04:40:04 tower kernel: mpt3sas_cm0: log_info(0x31120434): originator(PL), code(0x12), sub_code(0x0434)
+Sep 20 04:40:04 tower emhttpd: read SMART /dev/sdh
+Sep 20 04:40:04 tower emhttpd: read SMART /dev/sdg
+Sep 20 04:40:04 tower emhttpd: read SMART /dev/sdd
+Sep 20 04:40:04 tower emhttpd: read SMART /dev/sdf
+Sep 20 04:40:04 tower emhttpd: read SMART /dev/sdc
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth5592afe) entered disabled state
+Sep 20 04:40:14 tower kernel: veth60e3a3d: renamed from eth0
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth5592afe) entered disabled state
+Sep 20 04:40:14 tower kernel: veth5592afe (unregistering): left allmulticast mode
+Sep 20 04:40:14 tower kernel: veth5592afe (unregistering): left promiscuous mode
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth5592afe) entered disabled state
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth439191c) entered blocking state
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth439191c) entered disabled state
+Sep 20 04:40:14 tower kernel: veth439191c: entered allmulticast mode
+Sep 20 04:40:14 tower kernel: veth439191c: entered promiscuous mode
+Sep 20 04:40:14 tower kernel: eth0: renamed from veth29bd078
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth439191c) entered blocking state
+Sep 20 04:40:14 tower kernel: br-9df43293ab22: port 1(veth439191c) entered forwarding state
+Sep 20 04:40:30 tower kernel: docker0: port 3(veth1596245) entered disabled state
+Sep 20 04:40:30 tower kernel: veth4c6fe34: renamed from eth0
+Sep 20 04:40:30 tower kernel: docker0: port 3(veth1596245) entered disabled state
+Sep 20 04:40:30 tower kernel: veth1596245 (unregistering): left allmulticast mode
+Sep 20 04:40:30 tower kernel: veth1596245 (unregistering): left promiscuous mode
+Sep 20 04:40:30 tower kernel: docker0: port 3(veth1596245) entered disabled state
+Sep 20 04:40:30 tower kernel: docker0: port 3(vethac98996) entered blocking state
+Sep 20 04:40:30 tower kernel: docker0: port 3(vethac98996) entered disabled state
+Sep 20 04:40:30 tower kernel: vethac98996: entered allmulticast mode
+Sep 20 04:40:30 tower kernel: vethac98996: entered promiscuous mode
+Sep 20 04:40:30 tower kernel: eth0: renamed from vethd94c414
+Sep 20 04:40:30 tower kernel: docker0: port 3(vethac98996) entered blocking state
+Sep 20 04:40:30 tower kernel: docker0: port 3(vethac98996) entered forwarding state
+Sep 20 04:42:02 tower kernel: vethd94c414: renamed from eth0
+Sep 20 04:42:02 tower kernel: docker0: port 3(vethac98996) entered disabled state
+Sep 20 04:42:02 tower kernel: docker0: port 3(vethac98996) entered disabled state
+Sep 20 04:42:02 tower kernel: vethac98996 (unregistering): left allmulticast mode
+Sep 20 04:42:02 tower kernel: vethac98996 (unregistering): left promiscuous mode
+Sep 20 04:42:02 tower kernel: docker0: port 3(vethac98996) entered disabled state
+Sep 20 04:42:02 tower kernel: docker0: port 3(veth82d9582) entered blocking state
+Sep 20 04:42:02 tower kernel: docker0: port 3(veth82d9582) entered disabled state
+Sep 20 04:42:02 tower kernel: veth82d9582: entered allmulticast mode
+Sep 20 04:42:02 tower kernel: veth82d9582: entered promiscuous mode
+Sep 20 04:42:02 tower kernel: eth0: renamed from vethdc37ea2
+Sep 20 04:42:02 tower kernel: docker0: port 3(veth82d9582) entered blocking state
+Sep 20 04:42:02 tower kernel: docker0: port 3(veth82d9582) entered forwarding state
+Sep 20 04:43:34 tower kernel: vethdc37ea2: renamed from eth0
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth82d9582) entered disabled state
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth82d9582) entered disabled state
+Sep 20 04:43:34 tower kernel: veth82d9582 (unregistering): left allmulticast mode
+Sep 20 04:43:34 tower kernel: veth82d9582 (unregistering): left promiscuous mode
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth82d9582) entered disabled state
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth9b14ef2) entered blocking state
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth9b14ef2) entered disabled state
+Sep 20 04:43:34 tower kernel: veth9b14ef2: entered allmulticast mode
+Sep 20 04:43:34 tower kernel: veth9b14ef2: entered promiscuous mode
+Sep 20 04:43:34 tower kernel: eth0: renamed from vethde01da0
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth9b14ef2) entered blocking state
+Sep 20 04:43:34 tower kernel: docker0: port 3(veth9b14ef2) entered forwarding state
+Sep 20 04:44:52 tower kernel: eth0: entered promiscuous mode
+Sep 20 04:44:55 tower kernel: eth0: left promiscuous mode
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth9b14ef2) entered disabled state
+Sep 20 04:45:06 tower kernel: vethde01da0: renamed from eth0
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth9b14ef2) entered disabled state
+Sep 20 04:45:06 tower kernel: veth9b14ef2 (unregistering): left allmulticast mode
+Sep 20 04:45:06 tower kernel: veth9b14ef2 (unregistering): left promiscuous mode
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth9b14ef2) entered disabled state
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth38d6f94) entered blocking state
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth38d6f94) entered disabled state
+Sep 20 04:45:06 tower kernel: veth38d6f94: entered allmulticast mode
+Sep 20 04:45:06 tower kernel: veth38d6f94: entered promiscuous mode
+Sep 20 04:45:06 tower kernel: eth0: renamed from vethe186a54
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth38d6f94) entered blocking state
+Sep 20 04:45:06 tower kernel: docker0: port 3(veth38d6f94) entered forwarding state
+Sep 20 04:46:37 tower kernel: docker0: port 3(veth38d6f94) entered disabled state
+Sep 20 04:46:37 tower kernel: vethe186a54: renamed from eth0
+Sep 20 04:46:37 tower kernel: docker0: port 3(veth38d6f94) entered disabled state
+Sep 20 04:46:37 tower kernel: veth38d6f94 (unregistering): left allmulticast mode
+Sep 20 04:46:37 tower kernel: veth38d6f94 (unregistering): left promiscuous mode
+Sep 20 04:46:37 tower kernel: docker0: port 3(veth38d6f94) entered disabled state
+Sep 20 04:46:38 tower kernel: docker0: port 3(veth2053cc0) entered blocking state

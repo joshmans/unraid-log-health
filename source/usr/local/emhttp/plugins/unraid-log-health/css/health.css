@@ -1,0 +1,54 @@
+/* Colours come from the Unraid theme (inherit / currentColor); only the badges have their own,
+   dark enough for white text on any theme. */
+#lh-app { --lh-line: rgba(127,127,127,.35); --lh-soft: rgba(127,127,127,.09); --lh-mute: rgba(127,127,127,.95); max-width: 1100px; }
+#lh-app h3 { margin: 22px 0 8px; font-size: 1.15em; }
+#lh-app .lh-row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 6px 0 12px; }
+#lh-app .lh-grow { flex: 1 1 auto; }
+#lh-app .lh-dim { color: var(--lh-mute); }
+#lh-app .lh-small { font-size: .9em; }
+#lh-app .lh-mono { font-family: monospace; word-break: break-word; }
+#lh-app button { margin: 0; }
+#lh-app button.lh-link { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font-size: .9em; opacity: .85; }
+#lh-app .lh-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+#lh-app .lh-chip { border: 1px solid var(--lh-line); border-radius: 14px; padding: 2px 12px; background: var(--lh-soft); }
+#lh-app .lh-chip b { font-weight: 700; }
+
+#lh-app .lh-card { border: 1px solid var(--lh-line); border-left-width: 5px; border-radius: 4px; padding: 10px 14px; margin: 0 0 10px; background: var(--lh-soft); }
+#lh-app .lh-card.flooding { border-left-color: #b03a2e; }
+#lh-app .lh-card.noisy { border-left-color: #a05a00; }
+#lh-app .lh-card.chatty { border-left-color: #5d6d7e; }
+#lh-app .lh-card.stopped { opacity: .75; }
+#lh-app .lh-card-head { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
+#lh-app .lh-badge { display: inline-block; color: #fff; font-size: .8em; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; padding: 1px 8px; }
+#lh-app .lh-badge.flooding { background: #b03a2e; }
+#lh-app .lh-badge.noisy { background: #a05a00; }
+#lh-app .lh-badge.chatty { background: #5d6d7e; }
+#lh-app .lh-who { font-weight: 700; }
+#lh-app .lh-msg { margin: 6px 0 4px; }
+#lh-app .lh-metrics { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+#lh-app .lh-actions { display: flex; gap: 14px; margin-top: 6px; }
+#lh-app .lh-detail { margin: 8px 0 2px; padding: 8px 10px; border: 1px dashed var(--lh-line); border-radius: 3px; }
+#lh-app .lh-detail div { margin: 2px 0; }
+
+#lh-app .lh-scroll { overflow-x: auto; }
+#lh-app table.lh-table { width: 100%; border-collapse: collapse; }
+#lh-app table.lh-table th, #lh-app table.lh-table td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--lh-line); vertical-align: middle; }
+#lh-app table.lh-table td.num, #lh-app table.lh-table th.num { text-align: right; white-space: nowrap; }
+#lh-app .lh-bar { height: 8px; width: 110px; border-radius: 4px; background: var(--lh-soft); border: 1px solid var(--lh-line); overflow: hidden; }
+#lh-app .lh-bar i { display: block; height: 100%; background: #5d6d7e; }
+#lh-app .lh-bar.large i { background: #a05a00; }
+#lh-app .lh-bar.huge i { background: #b03a2e; }
+
+#lh-app fieldset { border: 1px solid var(--lh-line); border-radius: 4px; margin: 0 0 14px; padding: 8px 14px 12px; }
+#lh-app legend { padding: 0 6px; font-weight: 700; }
+#lh-app .lh-field { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin: 8px 0; }
+#lh-app .lh-field label { min-width: 250px; }
+#lh-app .lh-field input[type=number], #lh-app .lh-field input[type=time], #lh-app .lh-field select { width: auto; min-width: 8em; margin: 0; }
+#lh-app .lh-help { flex-basis: 100%; margin: 0 0 2px; }
+#lh-app .lh-msgbox { margin: 8px 0; padding: 8px 12px; border-radius: 4px; border: 1px solid var(--lh-line); }
+#lh-app .lh-msgbox.err { border-color: #b03a2e; }
+#lh-app .lh-msgbox.ok { border-color: #2e7d32; }
+#lh-app details > summary { cursor: pointer; margin: 6px 0; }
+#lh-app .lh-spin { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--lh-line); border-top-color: currentColor; border-radius: 50%; animation: lhspin .8s linear infinite; vertical-align: -2px; margin-right: 6px; }
+@keyframes lhspin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { #lh-app .lh-spin { animation: none; } }

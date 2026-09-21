@@ -1,0 +1,16 @@
+#!/usr/bin/php -q
+<?php
+/* Makes the plugin's cron file match the saved schedule. The installer runs this on every install and every boot
+ * (Unraid reinstalls plugins at boot), so a chosen schedule survives reboots and upgrades and is never reset to
+ * the default. `cron remove` deletes the file, for uninstall. Prints the line it installed, or that it is off. */
+require_once __DIR__ . '/../include/config.php';
+
+if (($argv[1] ?? '') === 'remove') {
+    $f = lh_cron_file();
+    if (is_file($f)) unlink($f);
+    echo "cron file removed\n";
+    exit(0);
+}
+$r = lh_cron_apply(lh_load_config());
+if ($r['error']) { fwrite(STDERR, $r['error'] . "\n"); exit(1); }
+echo $r['line'] === null ? "scheduled scans are off\n" : "{$r['line']}\n";

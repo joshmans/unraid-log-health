@@ -1,0 +1,6 @@
+Menu="SystemInformation"
+Title="Log Health"
+Icon="heartbeat"
+Tag="heartbeat"
+---
+<?PHP require_once "/usr/local/emhttp/plugins/unraid-log-health/include/page.php"; ?>

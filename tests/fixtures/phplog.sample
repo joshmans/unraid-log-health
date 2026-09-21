@@ -1,0 +1,60 @@
+[05-Sep-2026 13:02:21 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:23 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:02:23 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:02:23 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:02:23 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:02:23 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:02:23 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:02:26 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:31 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:36 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:41 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:46 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:50 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:02:50 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:02:50 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:02:50 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:02:50 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:02:50 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:02:51 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:02:56 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:01 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:06 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:11 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:16 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:21 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:03:21 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:03:21 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:03:21 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:03:21 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:03:21 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:03:22 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:27 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:29 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:03:29 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:03:29 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:03:29 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:03:29 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:03:29 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:03:32 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:37 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:42 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:47 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:52 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:57 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:03:59 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:03:59 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:03:59 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:03:59 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:03:59 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:03:59 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:04:02 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:04:07 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:04:08 America/Chicago] PHP Warning:  Undefined array key "Icon" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 48
+[05-Sep-2026 13:04:08 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 49
+[05-Sep-2026 13:04:08 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 51
+[05-Sep-2026 13:04:08 America/Chicago] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 54
+[05-Sep-2026 13:04:08 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 64
+[05-Sep-2026 13:04:08 America/Chicago] PHP Warning:  Undefined array key "Title" in /usr/local/emhttp/plugins/dynamix/include/DefaultPageLayout/Navigation/Main.php on line 67
+[05-Sep-2026 13:04:12 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78
+[05-Sep-2026 13:04:17 America/Chicago] PHP Warning:  Undefined array key 1 in /usr/local/emhttp/plugins/dynamix.system.temp/nchan/system_temp on line 78

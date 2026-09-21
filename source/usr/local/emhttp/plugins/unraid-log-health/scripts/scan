@@ -1,0 +1,16 @@
+#!/usr/bin/php -q
+<?php
+/* Cron entry: one scan, state written to RAM. Only reads logs; changes nothing else. */
+require_once __DIR__ . '/../include/scan.php';
+
+// one scan at a time: cron and the Scan now button can overlap
+$dir = dirname(lh_state_path());
+if (!is_dir($dir)) mkdir($dir, 0755, true);
+$lock = fopen("$dir/scan.lock", 'c');
+if (!$lock || !flock($lock, LOCK_EX | LOCK_NB)) exit(0);
+
+$prev = json_decode((string)@file_get_contents(lh_state_path()), true) ?: [];
+$state = lh_scan(lh_load_config(), $prev);
+$tmp = lh_state_path() . '.' . getmypid();
+file_put_contents($tmp, json_encode($state, JSON_UNESCAPED_SLASHES));
+rename($tmp, lh_state_path());

@@ -1,0 +1,100 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN [
+ <!ENTITY name "unraid-log-health">
+ <!ENTITY author "joshmans">
+ <!ENTITY version "2026.09.21b">
+ <!ENTITY gitURL "https://github.com/joshmans/unraid-log-health">
+ <!ENTITY pluginURL "&gitURL;/releases/download/&version;/&name;-&version;.txz">
+ <!ENTITY plgURL "https://raw.githubusercontent.com/joshmans/unraid-log-health/main/&name;.plg">
+ <!ENTITY sha256 "3f4a5870fa6d318771fe72280fe18e4f33bdc4b17f97ce239519ecd72b42ec66">
+ <!ENTITY launch "Tools/LogHealth">
+]>
+
+<PLUGIN name="&name;" Title="Log Health" author="&author;" version="&version;" pluginURL="&plgURL;" launch="&launch;" icon="heartbeat" min="7.2.0" support="&gitURL;/issues">
+
+<DESCRIPTION>
+Finds the logs that are spamming and tells you who is doing it: the plugin, program or container behind a message that repeats thousands of times, and the Docker logs that are growing without bound. Choose how often it scans, and switch each source on or off.
+</DESCRIPTION>
+
+<CHANGES><![CDATA[
+# Log Health
+
+## 2026.09.21b
+
+First release.
+
+- Finds the logs that are spamming and tells you who is doing it, in **Tools > System Information > Log Health**. Each finding is named after the plugin (with file and line), program or container behind it.
+- Looks at PHP errors, the system log, the log of every Docker container (its size, growth, limit, and what is repeating inside it) and other plugin logs. Each source can be switched off.
+- A message is flagged when it repeats a lot and either fast or as most of its own log. Findings are ranked flooding, noisy and chatty (slow but repetitive, such as healthchecks), still-happening first. A traceback that prints many lines is one finding.
+- Mute any finding you know about and don't care about, and unmute it later.
+- Choose how often to scan in words (every 5, 10, 15 or 30 minutes, every hour, every 3, 6 or 12 hours, once a day, or off). The default is every 15 minutes. The plugin writes the cron entry for you and keeps it across reboots and updates.
+- Reads only. It never changes a log, a Docker setting or a file outside its own settings. It reads only what a log gained since the last scan, and keeps its working data in RAM, so it does not write to your flash drive.
+- Tested on Unraid 7.4.0-beta.2 only.
+]]></CHANGES>
+
+<!-- installpkg, not upgradepkg: upgradepkg derives a package's name by stripping the last three
+     dash fields (Slackware's name-version-arch-build), and name-version.txz derives to
+     "unraid-log". Any other installed unraid-log-* package then counts as the old version of
+     this one, and the install is skipped as "newer version already installed". Nothing is matched
+     by name, so older versions of this plugin are removed explicitly first. This step only removes
+     package records, never settings or the cron file, because it runs before the download. -->
+<FILE Run="/bin/bash">
+<INLINE>
+for pkg in /var/log/packages/&name;-*; do
+  if [ -e "$pkg" ]; then removepkg "$(basename "$pkg")" >/dev/null 2>&amp;1; fi
+done
+exit 0
+</INLINE>
+</FILE>
+
+<FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="installpkg">
+<URL>&pluginURL;</URL>
+<SHA256>&sha256;</SHA256>
+</FILE>
+
+<FILE Run="/bin/bash">
+<INLINE>
+mkdir -p /boot/config/plugins/&name;
+
+# installpkg keeps whatever modes the archive had, so set them here
+chown -R root:root /usr/local/emhttp/plugins/&name;
+chmod -R 755 /usr/local/emhttp/plugins/&name;
+find /usr/local/emhttp/plugins/&name; -type f -exec chmod 644 {} \;
+chmod 755 /usr/local/emhttp/plugins/&name;/scripts/*
+
+# Unraid reinstalls every plugin at boot, so this runs on every boot too. The cron file is rebuilt from the
+# saved schedule (the default, every 15 minutes, only when nothing was ever saved), so a chosen schedule is kept.
+LH_NO_UPDATE_CRON=1 php -q /usr/local/emhttp/plugins/&name;/scripts/cron
+
+# update_cron builds the crontab from the plugins registered in /var/log/plugins, and
+# Unraid only registers this one after these scripts have finished, so wait for that
+( for i in $(seq 1 60); do
+    if [ -e /var/log/plugins/&name;.plg ]; then /usr/local/sbin/update_cron; break; fi
+    sleep 1
+  done ) >/dev/null 2>&amp;1 &lt;/dev/null &amp;
+
+# a first look, in the background, so the page has something to show (a scan reads logs and changes nothing)
+( nohup php -q /usr/local/emhttp/plugins/&name;/scripts/scan ) >/dev/null 2>&amp;1 &lt;/dev/null &amp;
+
+rm -f $(ls /boot/config/plugins/&name;/&name;-*.txz 2>/dev/null | grep -v "&version;")
+echo "Log Health &version; installed"
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+# stop any scan in progress, then take the schedule out of cron
+pkill -f "/usr/local/emhttp/plugins/&name;/scripts/scan" 2>/dev/null
+rm -f /boot/config/plugins/&name;/&name;.cron /boot/config/plugins/&name;/&name;-*.txz
+/usr/local/sbin/update_cron 2>/dev/null
+# Unraid does not forget the package on its own: without this, reinstalling the same
+# version before a reboot is skipped as "already installed" and installs nothing
+for pkg in /var/log/packages/&name;-*; do
+  [ -e "$pkg" ] &amp;&amp; removepkg "$(basename "$pkg")" >/dev/null 2>&amp;1
+done
+rm -rf /usr/local/emhttp/plugins/&name; /tmp/&name;
+# config.json (your schedule, switches and muted messages) is kept so a reinstall picks up where you left off
+</INLINE>
+</FILE>
+
+</PLUGIN>

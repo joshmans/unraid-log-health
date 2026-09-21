@@ -1,0 +1,35 @@
+#!/usr/bin/php -q
+<?php
+/* Prints the last scan as text. `report --scan` scans first. */
+require_once __DIR__ . '/../include/scan.php';
+
+function mb_strimwidth_lh(string $s, int $n): string { return strlen($s) > $n ? substr($s, 0, $n - 1) . '…' : $s; }
+function lh_ago(?int $ts, int $now): string { if ($ts === null) return ''; $m = max(0, intdiv($now - $ts, 60)); return $m < 30 ? '' : '  [quiet ' . ($m >= 120 ? intdiv($m, 60) . 'h' : $m . 'm') . ']'; }
+function lh_human(int $b): string { foreach (['B', 'KB', 'MB', 'GB'] as $i => $u) { if ($b < 1024 || $i === 3) return round($b, $i ? 1 : 0) . " $u"; $b /= 1024; } return ''; }
+
+if (in_array('--scan', $argv, true)) require __DIR__ . '/scan';
+$s = json_decode((string)@file_get_contents(lh_state_path()), true);
+if (!$s) { fwrite(STDERR, "no scan yet\n"); exit(1); }
+echo date('Y-m-d H:i:s', $s['ts']), "  read {$s['lines_read']} lines from ", count($s['sources']), " logs", $s['muted_hidden'] ? "  ({$s['muted_hidden']} muted hidden)" : '', "\n\n";
+$by = ['flooding' => [], 'noisy' => [], 'chatty' => []];
+foreach ($s['groups'] as $g) $by[$g['rep']['level']][] = $g;
+echo "SPAMMING: ", count($s['groups']), " incidents (", count($s['spam']), " distinct lines): ", count($by['flooding']), " flooding, ", count($by['noisy']), " noisy, ", count($by['chatty']), " chatty\n";
+foreach ($by as $level => $groups) {
+    if (!$groups) continue;
+    echo "\n", strtoupper($level), $level === 'chatty' ? "  (repetitive but slow: healthchecks, access logs)" : '', "\n";
+    foreach (array_slice($groups, 0, $level === 'chatty' ? 5 : 40) as $g) {
+        $x = $g['rep'];
+        printf("  %-9s %7d x  %6.1f/min %5.1f%%  %s%s\n", $x['id'], $x['total'], $x['rate'], $x['share'],
+            "{$x['key']}  " . mb_strimwidth_lh($x['sig'], 100), ($g['related'] ? "  (+{$g['related']} related)" : '') . lh_ago($x['last_ts'] ?? null, $s['ts']));
+    }
+    if (count($groups) > ($level === 'chatty' ? 5 : 40)) echo "  ... and ", count($groups) - ($level === 'chatty' ? 5 : 40), " more\n";
+}
+echo "\nDOCKER LOGS  (daemon default: ", ($s['docker']['daemon']['max_size'] ?? 'no limit'), ")  showing those over 50 MB\n";
+foreach ($s['docker']['containers'] ?? [] as $c) {
+    if ($c['bytes'] < 52428800) continue;
+    printf("  %-24s %9s %-6s %s%s\n", $c['name'], lh_human($c['bytes']), $c['level'] ?? '',
+        $c['limited'] ? "limit {$c['max_size']} x {$c['max_file']} files (up to " . lh_human($c['worst_case_bytes']) . ", now {$c['pct_of_file']}% of the first file)" : 'NO LIMIT: grows until the disk is full',
+        $c['growth_per_hour'] !== null ? '  +' . lh_human($c['growth_per_hour']) . '/h' : '');
+}
+$skipped = array_filter($s['sources'], fn($r) => $r['note'] === 'skipped');
+foreach ($skipped as $r) echo "\nSAMPLED (too much new data): {$r['path']} skipped ", lh_human($r['skipped_bytes']), "\n";
