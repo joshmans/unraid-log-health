@@ -8,7 +8,7 @@ Log Health reads your logs on a schedule, works out which lines are the same mes
 
 It only reads. It never changes a log, a Docker setting or a file outside its own settings.
 
-> **Status: first release.** Works on Unraid 7.2 and newer. It has been installed, upgraded, uninstalled and reinstalled through Unraid's plugin manager, and its scheduled scan has run from Unraid's cron. It has not yet been tested across a reboot. Please open an issue if anything behaves oddly.
+> **Status: first release.** Works on Unraid 7.2 and newer. It has been installed, upgraded, uninstalled and reinstalled through Unraid's plugin manager, and its scheduled scan has run from Unraid's cron. Please open an issue if anything behaves oddly.
 
 ## Contents
 
@@ -162,7 +162,6 @@ php -q /usr/local/emhttp/plugins/unraid-log-health/scripts/report
 - **Recent lines only:** a scan ignores lines older than 24 hours, and a finding disappears after 24 hours without being seen. It is a current-health view, not a history.
 - **Signatures are text based.** A message whose wording changes every time is not recognised as a repeat.
 - **Grouping is a heuristic** (see above).
-- **Not yet tested across a reboot.** The plugin is reinstalled from flash at boot, which rebuilds its schedule from your saved settings, but I have not watched that happen on a real reboot.
 
 ## Uninstall
 
