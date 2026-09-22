@@ -15,8 +15,8 @@ Read-only. It never changes a log, a Docker setting or a file outside its own se
 - [x] Tools page (Tools → System Information): incidents by level with details and mute, Docker log table, per-source switches, sensitivity, muted list
 - [x] Scan frequency chosen in words (off, 5/10/15/30 minutes, hourly, every 3/6/12 hours, daily at a time), written to the plugin's cron file; default every 15 minutes
 - [x] Plugin package and `.plg` (`build.sh`): installs the schedule from the saved settings on every install and boot, removes the cron file and package records on uninstall, keeps your settings
-- [x] Tested through Unraid's own plugin manager on 7.4.0-beta.2: install, upgrade, uninstall, reinstall, and a scheduled scan started by cron
-- [ ] Tested across a reboot, and on other Unraid versions and themes
+- [x] Tested through Unraid's own plugin manager: install, upgrade, uninstall, reinstall, and a scheduled scan started by cron
+- [ ] Tested across a reboot
 - [x] GitHub repository and release
 - [ ] Community Apps listing
 - [ ] Optional Unraid notification when something starts flooding

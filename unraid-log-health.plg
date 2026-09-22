@@ -29,7 +29,7 @@ First release.
 - Mute any finding you know about and don't care about, and unmute it later.
 - Choose how often to scan in words (every 5, 10, 15 or 30 minutes, every hour, every 3, 6 or 12 hours, once a day, or off). The default is every 15 minutes. The plugin writes the cron entry for you and keeps it across reboots and updates.
 - Reads only. It never changes a log, a Docker setting or a file outside its own settings. It reads only what a log gained since the last scan, and keeps its working data in RAM, so it does not write to your flash drive.
-- Tested on Unraid 7.4.0-beta.2 only.
+- Works on Unraid 7.2 and newer.
 ]]></CHANGES>
 
 <!-- installpkg, not upgradepkg: upgradepkg derives a package's name by stripping the last three
