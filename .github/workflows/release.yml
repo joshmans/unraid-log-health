@@ -1,0 +1,24 @@
+# Releases are made by bumping the top heading of CHANGELOG.md in a PR.
+# The shared workflow (joshmans/unraid-tools) tests, builds, publishes the GitHub
+# release and stamps unraid-log-health.plg with the package's SHA-256.
+name: Release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: {}
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    uses: joshmans/unraid-tools/.github/workflows/plugin-release.yml@main
+    with:
+      plg: unraid-log-health.plg
+      test-command: tests/run.sh
+      publish: ${{ github.event_name != 'pull_request' }}
